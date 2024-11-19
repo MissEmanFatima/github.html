@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar With Logo</title>
+    <style>
+        body {
+          background-color: cadetblue;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+        /* Navbar container */
+        .navbar {
+            overflow: hidden;
+            background-color:teal;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        /* logo */
+        .navbar .logo {
+            color:wheat;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+           text-transform: uppercase;
+        }
+        /* navbar links */
+        .navbar a {
+            color:wheat;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: brown;
+            color: rgb(red, green, blue);
+        }
+        /* Navbar menu */
+        .navbar .menu {
+            display: flex;
+        }
+        /* Hamburger menu (icon) */
+        .navbar .icon {
+            display: none;
+            cursor: pointer;
+        }
+        /* Responsive layout */
+        @media screen and (max-width: 768px) {
+            .navbar .menu a { display: none; }
+            .navbar .icon {
+                display: block;
+                color: #f2f2f2;
+                font-size: 30px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .navbar.responsive .menu {
+                flex-direction: column;
+                width: 100%;
+                background-color: #333;
+            }
+
+            .navbar.responsive .menu a {
+                display: block;
+                text-align: left;
+                padding: 14px 20px;
+                width: 100%;
+            }
+        }
+  
+
+
+
+    /*Basic Reset*/
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /*Banner Style*/
+    .banner {
+        position: relative; 
+         width: 100%;
+        height: 320px; 
+        padding-top:400px;
+        margin-top:40px;
+    background-image: url(Images/Flower.jpg);
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 20px;
+    }
+    /*Overlay*/
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color:rgba(196, 218, 193, 0.947);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color:cadetblue;
+        text-align: center;
+        
+    }
+    .overlay h1 {
+        font-size:3rem;
+    }
+    .overlay h2 {
+        font-size: .80rem;
+    }
+    /*Moblie Responsiveness*/
+    @media(max-width:768px){
+        .banner{
+            height: 300px;
+        }
+        .overlay h1 {
+            font-size: 2rem;
+        }
+        .overlay p1 {
+            font-size: 1rem;
+        }
+    }
+    .box{
+        height: 30%;
+        width: 30%;
+        overflow: hidden;
+       background-color: darkcyan;
+      color: burlywood;
+        padding: 10px 10px;
+       display: inline-block;
+       margin-top: 20px;
+       margin-bottom: 20px;
+    }
+    .boxx{
+        height: 30%;
+        width: 30%;
+        overflow: hidden;
+     background-color: darkcyan;
+      color:burlywood;
+        padding: 10px 10px;
+       display: inline-block;
+       margin-top: 20px;
+       margin-bottom: 20px;
+    }
+    .map{
+        height: 150px;
+        width: 150px;
+        overflow: hidden;
+     background-color: darkcyan;
+      color:burlywood;
+        padding: 10px 10px;
+       display: inline-block;
+       margin-top: 20px;
+       margin-bottom: 20px;
+    } 
+   </style>
+</head> 
+<body>
+    <div class="navbar" id="myNavbar">
+        <a href="#" class="Logo">WEB Dev TECH</a>
+        <div class="menu" id="menu">
+            <a href="#home">Home</a>
+            <a href="#services">Our Services</a>
+            <a href="#Portolio">Portfolio</a>
+            <a href="#about">About US</a>
+            <a href="Contact">Contact Us</a>
+           
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+               &#9776;
+    </a>
+    </div>
+    <script>
+        function toggleNavbar() {
+            var navbar = document.getElementById("myNavbar");
+            if (navbar.className === "navbar") {
+                navbar.className += " responsive";
+            } else {
+                navbar.className = "navbar";
+            }
+        }
+    </script>
+    <section>
+         <div class="banner">
+            <div class="overlay">
+<h1> Expert Digital Marketing Services</h1>
+<h2>Boost Your business with effective digital marketing strateges</h2>
+<button>Get Started</button>
+</div>
+    </section>
+ <section>
+    <div align="center">
+    <h1>Our Services</h1>
+    <div class="box">
+<img width="100%" src="Images/samsung.jpg" alt="Web Developer">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, qui?</p>
+  </div>
+  <div class="box">
+    <img width="100%" src="Images/samsung.jpg" alt="Web Developer">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, qui?</p>
+      </div>
+      <div class="box">
+        <img width="100%" src="Images/samsung.jpg" alt="Web Developer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, qui?</p>
+          </div>
+          </div>
+        </div>
+   </section>
+    <section>
+        <div align="center">
+        <h1>Portfolio</h1>
+     <div class="boxx">
+    <img width="100%" src="Images/samsung.jpg" alt="Web Developer">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, qui?</p>
+      </div>
+      <div class="boxx">
+        <img width="100%" src="Images/samsung.jpg" alt="Web Developer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, qui?</p>
+          </div>
+          <div class="boxx">
+            <img width="100%" src="Images/samsung.jpg" alt="Web Developer">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, qui?</p>
+              </div>
+             </div>
+             </div>
+            </section>
+        <section>
+            <div align="center">
+            <h1>About Us</h1>
+            <div  class="boxx">
+         <img width="100%" src="Images/samsung.jpg" alt="Web Developer">
+<p> <font color="burlywood">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veritatis similique, officiis iste quas amet? Reiciendis consectetur non ipsa error!</p>
+          </div>
+        </div>
+   </section>
+   <section>
+    <div>
+<section>
+<div align="center">
+    <h1>Contact me</h1>
+    <div class="box">
+        <pre>
+        <Label>Your Name:</Label>
+        <input type="text">
+        <Label>Your Email:</Label>
+        <input type="text">
+        <Label>Your Message:</Label>
+        <input type="text">
+</pre>
+
+       <input type="button" name="Submit" value="Submit">
+       <input type="button" name="Cancel" value="Cancel">
+
+    </div>
+    <div class="map">
+        <section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54832.77838105155!2d73.4442979!3d30.801270000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922a75d9a9639e5%3A0xa25a5b6b17fab12b!2sOkara%2C%20Punjab!5e0!3m2!1sen!2s!4v1731299711995!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </div>
+    </div>
+</section>
+</body>
+</html>
